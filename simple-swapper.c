@@ -17,8 +17,9 @@ return 0;
 
 // the function operates on the actual stored values in the addresses passed to it
 void swapit (int *p, int *q){
-    *p = *p * *q;
-    *q = *p / *q;
-    *p = *p / *q;
+    int temp;
+    temp = *p;
+    *p = *q;
+    *q = temp;
     printf("\nIn the function the first number is %d and the second number is %d", *p, *q);
 }
